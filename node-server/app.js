@@ -19,10 +19,10 @@ app.get('/getWeatherInfo/all/', async (req, resp) => {
     let result;
     try {
         result = await axios.get(URL + "onecall?lat=" + lat + "&lon=" + lon + "&appid=" + API_KEY + "&units=metric");
+        resp.json(result.data);
     } catch (err) {
-        console.error(`failed due to ${err.message}`);
+        console.error(`failed all api due to ${err.message}`);
     }
-    resp.json(result.data);
 });
 
 app.get('/getWeatherInfo/city/', async (req, resp) => {
@@ -30,10 +30,11 @@ app.get('/getWeatherInfo/city/', async (req, resp) => {
     let result;
     try {
         result = await axios.get(URL + "weather?q=" + city + "&appid=" + API_KEY + "&units=metric");
+        resp.json(result.data);
     } catch (err) {
-        console.error(`failed due to ${err.message}`);
+        console.error(`failed city api due to ${err.message}`);
     }
-    resp.json(result.data);
+    
 });
 
 app.listen(port, () => {

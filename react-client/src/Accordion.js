@@ -50,11 +50,11 @@ const Accordion = ({ date, daily, weatherData }) => {
                                         <tbody className="today-table-body">
                                             <tr>
                                                 <td>
-                                                    <div>Status {item?.weather[0]?.description}</div>
-                                                    <div>Temperature {item?.temp?.day} Celcius</div>
-                                                    <div>Pressure {item?.pressure} hPa</div>
-                                                    <div>Humidity {item?.humidity}%</div>
-                                                    <div>Cloudiness {item?.clouds}%</div>
+                                                    <div>Status: {item?.weather[0]?.description}</div>
+                                                    <div>Temperature: {item?.temp} Celcius</div>
+                                                    <div>Pressure: {item?.pressure} hPa</div>
+                                                    <div>Humidity: {item?.humidity}%</div>
+                                                    <div>Cloudiness: {item?.clouds}%</div>
                                                 </td>
                                             </tr>
                                         </tbody>
